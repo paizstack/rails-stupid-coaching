@@ -1,5 +1,13 @@
-<h1>Your Question</h1>
-<p><strong>Question:</strong> <%= @question %></p>
-<p><strong>Coach's Answer:</strong> <%= @answer %></p>
-
-<%= link_to 'Ask another question', ask_path %>
+<!-- app/views/answer.html.erb -->
+<div class="container">
+  <h1>Stupid Coaching</h1>
+  <blockquote>
+    <p><%= params[:question] %></p>
+    <footer>—You</footer>
+  </blockquote>
+  <div class="alert alert-success">
+    Great!
+    <footer>—Your coach</footer>
+  </div>
+  <a href="/ask" class="btn btn-link">Ask a new question</a>
+</div>
